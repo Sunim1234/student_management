@@ -1,0 +1,70 @@
+INSERT INTO students (student_id, name, age, gender, email, enrollment_date)
+VALUES 
+(1, 'Liam Parker', 20, 'Male', 'liam.parker@example.com', '2025-03-30'),
+(2, 'Sophia Adams', 22, 'Female', 'sophia.adams@example.com', '2025-03-30'),
+(3, 'Ethan Davis', 19, 'Male', 'ethan.davis@example.com', '2025-03-30'),
+(4, 'Olivia Brown', 21, 'Female', 'olivia.brown@example.com', '2025-03-30'),
+(5, 'Mason Rodriguez', 23, 'Others', 'mason.rodriguez@example.com', '2025-03-30');
+
+INSERT INTO courses
+VALUES
+  (31, 'Physics', 1100, 4),
+  (32, 'Mathematics', 1101, 3),
+  (33, 'Computer Science', 1102, 4),
+  (34, 'Chemistry', 1100, 3),
+  (35, 'Biology', 1103, 3);
+
+INSERT INTO departments (department_id, department_name)
+VALUES
+  (1100, 'Physical Sciences'),
+  (1101, 'Applied Mathematics'),
+  (1102, 'Software Engineering'),
+  (1103, 'Chemical Engineering'),
+  (1104, 'Life Sciences');
+
+INSERT INTO enrollments (enrollment_id, student_id, course_id, grade)
+VALUES
+  (1, 1, 31, 'A'),
+  (2, 2, 32, 'B+'),
+  (3, 3, 33, 'A-'),
+  (4, 4, 34, 'B'),
+  (5, 5, 35, 'A');
+
+
+UPDATE students
+SET email = 'newemail@example.com'
+WHERE student_id = 1;
+
+
+UPDATE courses
+SET credits = 5
+WHERE course_id = 33;
+
+
+UPDATE enrollments
+SET grade = 'A+'
+WHERE enrollment_id = 3;
+
+
+UPDATE departments
+SET department_name = 'Advanced Mathematics'
+WHERE department_id = 1101;
+
+
+DELETE FROM students
+WHERE student_id = 5;
+
+
+DELETE FROM courses
+WHERE course_id = 34;
+
+
+DELETE FROM enrollments
+WHERE enrollment_id = 2;
+
+
+DELETE FROM departments
+WHERE department_id = 1104;
+
+
+
