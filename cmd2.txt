@@ -61,3 +61,6 @@ if __name__ == "__main__":
     insert_data("Ram",21)
     upd_data(21);'''
     del_data(21)
+
+library is created to do specific functions. 
+framework contains the entire ecosystem for development.
